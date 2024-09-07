@@ -1,0 +1,23 @@
+.btn-step {
+  @apply rounded-full size-10 border-2 border-primary;
+
+  .icon {
+    @apply text-primary
+  }
+
+  &.active {
+    @apply bg-primary;
+
+    .icon {
+      @apply text-white
+    }
+  }
+
+  &.disabled {
+    @apply border-gray-300;
+
+    .icon {
+      @apply text-gray-300
+    }
+  }
+}

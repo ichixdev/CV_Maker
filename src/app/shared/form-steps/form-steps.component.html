@@ -1,0 +1,14 @@
+<section class="flex justify-center gap-5">
+  @for (item of steps(); track $index) {
+    <button
+      (click)="updateStepState(item.step)"
+      class="btn-step"
+      [ngClass]="{
+        active: item.state === 'active',
+        disabled: item.state === 'disabled',
+      }"
+    >
+      <fa-icon [icon]="item.icon" class="icon"></fa-icon>
+    </button>
+  }
+</section>
